@@ -18,7 +18,7 @@ Allows you to choose an alphabet (katakana or hiragana), a mode (learn or test) 
 
 Below example of learn screen:
 
-![katascreen2](https://github.com/user-attachments/assets/4610d283-4bdb-4343-994e-8039fe809c3b)
+![katascreen1](https://github.com/user-attachments/assets/520efff4-ff9f-4e97-a443-5d8f877adc3f)
 
 ---
 
