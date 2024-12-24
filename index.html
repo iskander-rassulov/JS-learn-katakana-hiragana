@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Katakana Hiragana</title>
+
+  <!-- Иконка для вкладки (favicon) -->
+  <link rel="icon" href="icon.jpg" type="image/jpeg" />
+
+  <!-- Подключаем CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Screen 1: Choose Script -->
+  <div id="screen-choose-script" class="screen active">
+    <h1>Choose a Script</h1>
+    <p class="hint">Select either Katakana or Hiragana to begin</p>
+    <div class="tile-container">
+      <div id="katakana-tile" class="tile">
+        <span class="tile-symbol">ア</span>
+        <span class="tile-text">Katakana</span>
+      </div>
+      <div id="hiragana-tile" class="tile">
+        <span class="tile-symbol">あ</span>
+        <span class="tile-text">Hiragana</span>
+      </div>
+    </div>
+
+    <!-- Информация об авторе внизу -->
+    <div class="credits">
+        <span>Made by Iskandar Rassulov</span>
+        <span><a href="https://github.com/iskander-rassulov" target="_blank">• GitHub</a></span>
+    </div>
+      
+  </div>
+
+  <!-- Screen 2: Choose Mode -->
+  <div id="screen-choose-mode" class="screen hidden">
+    <button id="back-to-script" class="back-button">↩</button>
+    <h1>Choose a Mode</h1>
+    <p class="hint">Select a mode to continue</p>
+    <div class="tile-container">
+      <div id="learn-tile" class="tile">
+        <span class="tile-symbol">学</span>
+        <span class="tile-text">Learn</span>
+      </div>
+      <div id="test-tile" class="tile">
+        <span class="tile-symbol">試</span>
+        <span class="tile-text">Test</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 3: Quiz Screen -->
+  <div id="quiz-screen" class="screen hidden">
+    <button id="home-button" class="back-button">↩</button>
+    <button id="refresh-button" class="refresh-button">↻</button>
+    <h1 id="quiz-title">Quiz</h1>
+    <p id="mode-indicator" class="mode-indicator">Mode: Infinite Learn</p>
+
+    <div class="progress">
+      Correct: <span id="correctCount">0</span> | Wrong: <span id="wrongCount">0</span>
+    </div>
+
+    <div class="question-box">
+      <div id="question" class="question">?</div>
+      <div class="options">
+        <button class="option" data-index="0"></button>
+        <button class="option" data-index="1"></button>
+        <button class="option" data-index="2"></button>
+        <button class="option" data-index="3"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 4: Result Screen -->
+  <div id="result-screen" class="screen hidden">
+    <h1>Session Results</h1>
+    <p id="result-stats"></p>
+    <p id="result-grade"></p>
+    <button id="restart-button" class="selection-button">Home</button>
+  </div>
+
+  <!-- Подключаем скрипты -->
+  <script src="scripts.js"></script>
+</body>
+</html>

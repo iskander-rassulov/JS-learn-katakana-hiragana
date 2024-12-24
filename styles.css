@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Общий стиль для экранов */
+.screen {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    display: none; /* Изначально все скрыты */
+}
+
+.screen.active {
+    display: block; /* Активный экран показываем */
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hint {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Плитки */
+.tile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tile:hover {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+}
+
+.tile-symbol {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #353535;
+}
+
+.tile-text {
+    font-size: 16px;
+}
+
+#screen-choose-mode {
+    position: relative; /* Контейнер становится "ближайшим позиционированным родителем" */
+}
+
+#quiz-screen{
+    position: relative;
+}
+
+/* Кнопка «Back» или «Home» */
+.back-button {
+    position: absolute; 
+    top: 15px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+}
+
+.back-button:hover{
+    color: #303030;
+}
+
+.refresh-button{
+    position: absolute; 
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #666;
+    cursor: pointer;
+}
+
+.refresh-button:hover{
+    color: #303030;
+}
+
+.mode-indicator{
+    font-size: 14px;
+    color: #666;
+}
+
+/* Стиль контейнера Quiz */
+.question-box {
+    margin-top: 20px;
+}
+
+.question {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Сетка 2×2 для опций */
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.option {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    transition: background-color 0.3s;
+    min-height: 50px; /* Чтобы кнопки были похожи на квадраты */
+}
+
+.option:hover {
+    background-color: #ddd;
+}
+
+.option.correct {
+    background-color: #c8e6c9; /* зеленоватый */
+}
+
+.option.wrong {
+    background-color: #ffcdd2; /* красноватый */
+}
+
+/* Экран результатов */
+.selection-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #666;
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+.credits {
+    display: flex;            /* Включаем Flexbox */
+    justify-content: center;  /* Выравниваем элементы по центру по горизонтали */
+    align-items: center;      /* Выравниваем по вертикали (если нужно) */
+    gap: 10px;                /* Расстояние между элементами */
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .credits a {
+    color: #778da9;
+    text-decoration: none;
+  }
+  
+  .credits a:hover {
+    color: #415a77;
+  }
+  
+  
